@@ -67,7 +67,10 @@ document.getElementById("imcForm").addEventListener('submit', async function(eve
     const altura = document.getElementById("altura").value;
     const sexo = document.getElementById("sexo").value;
 
+    peso.replace()
+
     const dados = { nome, peso, altura, sexo };
+
 
     try {
         console.log("Enviando requisição para o back...");
@@ -90,3 +93,18 @@ document.getElementById("imcForm").addEventListener('submit', async function(eve
     window.location.reload();
 
 });
+
+document.getElementById("imcForm").addEventListener("keydown", function(event) {
+    if (event.key === ",") {
+        event.preventDefault();
+    }
+});
+
+document.getElementById("imcForm").addEventListener("input", function(event) {
+    let valor = event.target.value;
+
+    if (valor.includes(",")) {
+        event.target.value = valor.replace(",", ",");
+    }
+
+})
