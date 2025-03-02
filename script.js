@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     async function obterDados() {
         try {
-            const response = await fetch("http://localhost:8080/api/imc", {
+            const response = await fetch("https://imc-on-back.onrender.com/api/imc", {
                 method: "GET"
             });
 
@@ -72,7 +72,7 @@ document.getElementById("imcForm").addEventListener('submit', async function(eve
     try {
         console.log("Enviando requisição para o back...");
 
-        const response = await fetch("http://localhost:8080/api/imc", {
+        const response = await fetch("https://imc-on-back.onrender.com/api/imc", {
             method: "POST",
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(dados)
