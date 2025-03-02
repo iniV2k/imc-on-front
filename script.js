@@ -67,8 +67,6 @@ document.getElementById("imcForm").addEventListener('submit', async function(eve
     const altura = document.getElementById("altura").value;
     const sexo = document.getElementById("sexo").value;
 
-    peso = parseFloat(peso.replace(",", "."));
-
     const dados = { nome, peso, altura, sexo };
 
     try {
